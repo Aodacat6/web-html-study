@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局</title>
+    <style type="text/css">
+        /*去掉边框*/
+        body{
+            margin: 0px;
+        }
+        /*定义整体样式*/
+        div#container{
+            height: 700px;
+            width: 100%;
+            background: #288b28;
+        }
+        div#top{
+            height: 15%;
+            width: 100%;
+        }
+        div#left{
+            height: 75%;
+            width: 10%;
+            background: aqua;
+            /*增加浮动效果，没有的话左右无法并列显示*/
+            float: left;
+        }
+        div#right{
+            height: 75%;
+            width: 90%;
+            background: antiquewhite;
+            float: left;
+        }
+        div#bottom{
+            height: 10%;
+            width: 100%;
+            background: gold;
+            /*去除浮动，否则看不到效果*/
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="top">头部</div>
+        <div id="left">左侧菜单栏</div>
+        <div id="right">右侧内容</div>
+        <div id="bottom">底部</div>
+    </div>
+</body>
+</html>
