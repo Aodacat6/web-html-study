@@ -6,3 +6,15 @@
 #left{
     text-align: left;
 }
+
+/*链接未点击时*/
+div a:link{
+    color: red;
+    /*去掉下划线*/
+    text-decoration: none;
+}
+
+/*已点击*/
+div a:visited{
+    color: green;
+}
