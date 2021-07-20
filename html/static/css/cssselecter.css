@@ -1,0 +1,23 @@
+p{
+    color: red;
+    font-size: 20px;
+}
+
+#pid{
+    color: #288b28;
+    font-size: 15px;
+}
+
+#pidpro a{
+    color: black;
+    font-size: 17px;
+}
+
+.pclass{
+    color: blue;
+    font-size: 18px;
+}
+
+[spellcheck=true]{
+    color: green;
+}

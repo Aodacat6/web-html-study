@@ -1,0 +1,11 @@
+body{
+    background-image: url(../images/cat.jpg);
+    /*background-color: aliceblue;*/
+    /*是否允许重复*/
+    /*background-repeat: no-repeat;*/
+}
+
+p{
+    width: 200px;
+    background-color: red;
+}
