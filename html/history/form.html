@@ -5,7 +5,7 @@
     <title>from表格</title>
 </head>
 <body>
-    <form method="get" action="http://localhost:8081/get">
+    <form method="get" action="http://localhost:8081/get" hidden>
         用户名：<input type="text" name="name"><br />
         密码：<input type="password" name="password"><br />
         登录方式：管理员<input type="radio" name="type" value="0">
@@ -18,12 +18,19 @@
         <br />
         <br />
         <select>
-            <option >111</option>
+            <option>111</option>
             <option>222</option>
             <option>333</option>
         </select><br />
     </form>
     <textarea cols="10" rows="10"></textarea>
+
+    <!--formaction 只对submit有效-->
+    <form>
+        <input type="submit" formaction="http://localhost:8081/submit" formmethod="post">
+        <br />
+        <input type="submit" formaction="http://localhost:8081/cancle" formmethod="get" value="cancle">
+    </form>
 
 </body>
 </html>
