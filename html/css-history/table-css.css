@@ -1,0 +1,33 @@
+table,th,td,tr{
+    /*宽度  边框线样式  颜色*/
+    /*solid 实线 double 双实线*/
+    border: 1px solid black;
+    padding: 2px;
+    margin: 2px;
+    /*合并边框线*/
+    border-collapse: collapse;
+    /*文字居中对齐*/
+    text-align: center;
+    background-color: aqua;
+
+}
+
+
+td{
+
+    width: 100px;
+    height: 20px;
+    border-collapse: collapse;
+}
+
+#tr1 td{
+    background-color: antiquewhite;
+}
+
+#tr2 td{
+    background-color: white;
+}
+
+#tr3 td{
+    background-color: antiquewhite;
+}

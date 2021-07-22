@@ -1,0 +1,44 @@
+p{
+    /*设置轮廓*/
+    outline-style: solid;
+    width: 100px;
+    outline-color: aqua;
+}
+
+#position{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+}
+
+div{
+    width: 220px;
+    height: 500px;
+    background-color: gray;
+    border-collapse: collapse;
+}
+#p1{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    float: left;
+}
+#p2{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    float: left;
+
+}
+#p3{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    float: left;
+
+}
+
+#text{
+    clear: both;
+}
