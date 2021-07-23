@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击事件</title>
+</head>
+<body>
+    <div><button id="btn">点击</button></div>
+    <script>
+        /**
+         * 最常用的点击事件机制
+         * addEventListener()
+         * @type {HTMLElement}
+         */
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click", f);
+        function f() {
+            alert("点了我");
+        }
+    </script>
+</body>
+</html>
