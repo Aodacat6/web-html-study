@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list列转行以及是否可见</title>
+    <style type="text/css">
+        /*li{*/
+        /*    display: inline;*/
+        /*}*/
+        li{
+            /*列转行*/
+            display: inline-block;
+            /*visibility: hidden;*/
+            border: aqua solid 1px;
+            background: antiquewhite;
+        }
+        div{
+            visibility: hidden;
+        }
+        li:link,li:visited,li:hover,li:active{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">系统管理</a></li>
+        <li><a href="#">基础数据</a></li>
+        <li><a href="#">FOD管理</a></li>
+    </ul>
+    <div>这里要隐藏</div>
+</body>
+</html>

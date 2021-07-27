@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js变量</title>
+</head>
+<body>
+    <script>
+        //1、不用var声明的都是全局变量
+        //2、方法外的变量都是全局变量
+        var a = 1;  //全局
+        b = 2;   //全局
+        function f() {
+            c = 3;    //全局
+            var d = 5;   //局部
+            alert("c + d = " + (c + d));
+            alert("a + b = " + (a + b));
+        }
+        f();
+        alert("a= " + a);
+        alert("b= "+ b);
+        alert("c = "+ c);
+        alert("d = "+ d);
+    </script>
+</body>
+</html>

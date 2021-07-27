@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js</title>
+</head>
+<body>
+    <script>
+        function f() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            document.getElementById("c").value = a + b;
+        }
+
+        alert(f("2", 9));
+        // var arr = new Array();
+        // arr[0] = 0;
+        // arr[1] = 1;
+        // arr[2] = 2;
+        // arr[3] = 3;
+        // var i = arr.length;
+        // while (i > 0){
+        //     if (i == 1) {
+        //         document.write("等于0单独打印");
+        //         break;
+        //     }
+        //     if (i == 2) {
+        //         document.write("等于1不打印");
+        //         i--
+        //         continue;
+        //     }
+        //     document.write(arr[i-1]);
+        //     i--;
+        // }
+        // for (var i=0; i< arr.length; i++){
+        //     document.write(arr[i] + "<br />");
+        // }
+        // var j =0;
+        // for (j in arr) {
+        //     document.write(arr[j] + "<br />");
+        // }
+    </script>
+    <form>
+        a: <input id="a" type="text"><br />
+        b: <input id="b" type="text"><br />
+        和：<input id="c" type="text"><br />
+        <input type="button" onclick="f()" value="求和">
+    </form>
+</body>
+</html>
