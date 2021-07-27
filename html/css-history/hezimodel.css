@@ -1,0 +1,61 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#left{
+    width: 180px;
+    height: 760px;
+    border: red;
+    background-color: green;
+    font-size: 20px;
+    text-align: center;
+    line-height: 900px;
+    float: left;
+    margin: 0px;
+}
+
+#right{
+    width: 1500px;
+    height: 760px;
+    /*border: #288b28 solid 1px;*/
+    /*background-color: black;*/
+    float: left;
+    margin: 0px;
+}
+
+#rightup{
+    width: 1500px;
+    height: 100px;
+    background-color: yellow;
+    float: left;
+}
+
+#rightcenter{
+    width: 1500px;
+    height: 360px;
+    background-color: blueviolet;
+    float: left;
+}
+
+#rightcenterup{
+
+    width: 1500px;
+    height: 30px;
+    background-color: aqua;
+    float: left;
+}
+
+#rigntbuttom{
+    width: 1500px;
+    height: 300px;
+    background-color: red;
+    float: left;
+}
+
+#rigntbuttomup{
+    width: 1500px;
+    height: 30px;
+    background-color: aqua;
+    float: left;
+}
