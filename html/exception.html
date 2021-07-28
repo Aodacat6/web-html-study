@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js异常捕获</title>
+</head>
+<body>
+    <form>
+        姓名：<input type="text" id="txt">
+        <br />
+        <input type="submit" onclick="f()">
+    </form>
+    <script type="text/javascript">
+        function f() {
+            try{
+                var name = document.getElementById("txt").value;
+                if (name == null || name == undefined || name == "") {
+                    throw "请输入姓名";
+                }
+            }catch (e) {
+                alert(e)
+            }
+        }
+
+    </script>
+</body>
+</html>
