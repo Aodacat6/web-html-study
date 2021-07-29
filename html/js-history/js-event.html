@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+    <style type="text/css">
+        input{
+            width: 100px;
+            height: 50px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div1">
+        <form>
+            <input id="ext" type="button" value="按钮">
+        </form>
+    </div>
+
+        <script type="text/javascript">
+
+            var ext = document.getElementById("ext");
+            ext.addEventListener("click", a, false);
+            //ext.addEventListener("mouseout", b);
+
+            //ext.removeEventListener("click", a);
+            function a(event) {
+                alert("event.type:" + event.type)
+            }
+            function b() {
+                alert("b")
+            }
+
+
+                    //  事件冒泡
+                      //上层的元素都会收到事件
+                        //addEventListener("click", a, false);  false 不冒泡
+
+            var div1 = document.getElementById("div1");
+            div1.addEventListener("click", divclick);
+            function divclick() {
+                alert("div click")
+            }
+        </script>
+
+<!--    <script type="text/javascript">-->
+<!--        function onclick1() {-->
+<!--            //document.getElementById("p1").innerText = "click me";-->
+<!--            document.getElementById("btn1").style.background = "blue";-->
+<!--        }-->
+
+<!--        function onmouseover1() {-->
+<!--            document.getElementById("p1").innerText = "鼠标经过";-->
+
+<!--        }-->
+
+<!--        function onmouseout1() {-->
+<!--            document.getElementById("p1").innerText = "鼠标移出";-->
+
+<!--        }-->
+
+<!--        function onchange1() {-->
+<!--            document.getElementById("p1").innerText = "内容变了";-->
+
+<!--        }-->
+
+<!--        function onselect1() {-->
+<!--            document.getElementById("p1").innerText = "选中了文本框";-->
+
+<!--        }-->
+<!--    </script>-->
+
+
+<!--    <div>-->
+<!--        <form>-->
+<!--            <input id="btn1" type="button" value="click me" onclick="onclick1()"-->
+<!--                   onmouseover="onmouseover1()" onmouseout="onmouseout1()">-->
+<!--            <br />-->
+<!--            <input style="background: white" type="text" onchange="onchange1()" onselect="onselect1()">-->
+<!--        </form>-->
+<!--        <p id="p1"></p>-->
+
+<!--    </div>-->
+
+</body>
+</html>

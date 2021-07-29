@@ -5,22 +5,36 @@
     <title>js变量</title>
 </head>
 <body>
-    <script>
-        //1、不用var声明的都是全局变量
-        //2、方法外的变量都是全局变量
-        var a = 1;  //全局
-        b = 2;   //全局
-        function f() {
-            c = 3;    //全局
-            var d = 5;   //局部
-            alert("c + d = " + (c + d));
-            alert("a + b = " + (a + b));
+    <ul>
+        <li>这是1</li><li>这是2</li><li>这是3</li>
+    </ul>
+    <script type="text/javascript">
+        var arr = new Array();
+        arr = document.getElementsByTagName("li");
+        //alert(arr[0].innerText)
+        // for (a in arr){
+        //     document.write(a.innerText + "<br/>");
+        // }
+        for (var i=0; i<arr.length; i++) {
+            document.write(arr[i].innerText + "<br/>");
         }
-        f();
-        alert("a= " + a);
-        alert("b= "+ b);
-        alert("c = "+ c);
-        alert("d = "+ d);
     </script>
+<!--    <script>-->
+<!--        //1、不用var声明的都是全局变量-->
+<!--        //2、方法外的变量都是全局变量-->
+<!--        var a = 1;  //全局-->
+<!--        b = 2;   //全局-->
+<!--        function f() {-->
+<!--            c = 3;    //全局-->
+<!--            var d = 5;   //局部-->
+<!--            alert("c + d = " + (c + d));-->
+<!--            alert("a + b = " + (a + b));-->
+<!--        }-->
+<!--        f();-->
+<!--        alert("a= " + a);-->
+<!--        alert("b= "+ b);-->
+<!--        alert("c = "+ c);-->
+<!--        alert("d = "+ d);-->
+<!--    </script>-->
 </body>
 </html>

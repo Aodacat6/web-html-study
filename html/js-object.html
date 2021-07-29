@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js object</title>
+</head>
+<body>
+
+<script>
+    var str = "hello world";
+    //alert("length= " + str.length);
+    //alert("h is " + str.indexOf('e'));
+    //alert("sub is " + str.substring(1, 3));
+
+    function gettime() {
+        date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth();
+        var day = date.getDay();
+
+        var hour = date.getHours();
+        var mi = date.getMinutes();
+        var s = date.getSeconds();
+
+        alert(year + "-" + convert(month) + "-" + convert(day) + " " + convert(hour) + ":" + convert(mi) + ":" + convert(s));
+    }
+
+    function convert(time) {
+        if(time.toString().length == 1) {
+            return "0"+time;
+        }
+        return time;
+    }
+
+    //arr = new Array(1,2,4,3);
+    //alert(arr.sort())
+
+    //alert(Math.max(1,2,9,10));
+    alert(parseInt(Math.random()*100));
+
+
+</script>
+
+    <div><button onclick="gettime()">点击</button></div>
+
+</body>
+</html>

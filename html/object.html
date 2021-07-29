@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+
+      //第一种创建对象方法
+
+      object = new Object();
+      object.name = "xiaming";
+      object.age = 19;
+
+      //alert("name: "+ object.name + " age:" + object.age);
+
+      //第二种创建对象方法
+      function people(name, age) {
+          this.name = name;
+          this.age = age;
+      }
+
+      son = new people("xiaming", 10);
+      alert(son.name + "  " + son.age);
+
+
+
+  </script>
+</body>
+</html>
