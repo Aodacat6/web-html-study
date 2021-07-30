@@ -36,12 +36,38 @@
     //alert(arr.sort())
 
     //alert(Math.max(1,2,9,10));
-    alert(parseInt(Math.random()*100));
+    //alert(parseInt(Math.random()*100));
 
+    function changeurl() {
+        var aa = document.getElementById("aurl");
+        alert(aa.getAttribute("href"));
+        aa.setAttribute("href", "http://www.damiaostation.top")
+    }
+    //window.open("http://www.damiaostation.top");
 
+    // var mytime = setInterval(function () {
+    //     ftime();
+    // }, 1000);
+    // function ftime() {
+    //     var time = new Date();
+    //     document.getElementById("div1").innerHTML = time;
+    //     //alert(time)
+    //     //var timestr = time.toLocaleString();
+    //     //document.getElementById("div1").innerHTML = timestr;
+    // }
+    function forward() {
+        history.forward();
+    }
+
+    function back() {
+        history.back();
+    }
 </script>
 
     <div><button onclick="gettime()">点击</button></div>
-
+    <a id="aurl" href="http://www.baidi.com" onclick="changeurl()">这里是百度</a>
+    <div id="div1"></div>
+    <button onclick="forward()">前进</button>
+    <button onclick="back()">后退</button>
 </body>
 </html>
