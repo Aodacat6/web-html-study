@@ -20,11 +20,14 @@
       function people(name, age) {
           this.name = name;
           this.age = age;
+          this.eat = function () {
+            alert("eat")
+          }
       }
 
       son = new people("xiaming", 10);
       alert(son.name + "  " + son.age);
-
+        son.eat();
 
 
   </script>
