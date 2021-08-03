@@ -14,6 +14,8 @@ $(document).ready(function () {
                 }
         });*/
 
+        var tbody = document.getElementById("tbody1");
+
         $.ajax({
             url:'http://localhost/api/login',
             type:'GET',
@@ -26,6 +28,7 @@ $(document).ready(function () {
         success:function(data){
                 alert("登录成功")
             $("#result").val(JSON.stringify(data))
+            tbody.innerHTML = "<tr><td>1</td><td>tom</td><td>12</td></tr>";
             //当请求成功之后调用，传入返回的数据，以及包含成功代码字符串
             //$("#result").text = data;
         },
