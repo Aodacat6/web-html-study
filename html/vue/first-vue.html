@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个vue</title>
+</head>
+<body>
+
+   <!--------------------------------
+    ------------view层--------------
+
+                v-bind：属性名      属性绑定
+
+
+    ---------------------------------->
+    <div id="app">
+<!--        <a v-bind:href="message">点我</a>-->
+<!--        <h1 v-if="type">YES</h1>-->
+<!--        <h1 v-else>NO</h1>-->
+<!--        <h1 v-if="type==='a'">这是a</h1>
+        <h1 v-else-if="type==='b'">这是b</h1>
+        <h1 v-else>这是非ab</h1>-->
+
+        <!--不能用data.types-->
+<!--        <li v-for="(index,item) in types">-->
+<!--            {{index}}&#45;&#45;{{item}}-->
+<!--        </li>-->
+
+<!--        v-on:事件名 绑定事件-->
+<!--        <button v-on:click="hello" v-on:mouseover="hello">click me</button>-->
+
+<!--        v-model实现元素和数据双向绑定-->
+<!--        双向绑定文本：<input type="text" v-model="message" value="hello">{{message}}-->
+<!--        单复选框：<input type="checkbox" v-model="check"><br />-->
+        多复选框：<br />
+        <input type="checkbox" id="1" value="tom" v-model="checkname"><br />
+        <input type="checkbox" id="2" value="ming" v-model="checkname"><br />
+        <input type="checkbox" id="3" value="大喵" v-model="checkname"><br />
+        选中的值:{{checkname}}<br />
+        单选框：<br/>
+        <input type="radio" value="one" v-model="radioValue"><br />
+        <input type="radio" value="two" v-model="radioValue"><br />
+        选中的值: {{radioValue}}<br />
+        <select v-model="selectVal">
+            <option disabled >请选择----</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select><br />
+        选中的值：{{selectVal}}
+    </div>
+
+
+
+    <script  type="text/javascript" src="vue.js"></script>
+    <script type="text/javascript">
+        //---------------------------------------
+        //-------------------vm层绑定view和model--
+        //-------------------------------------
+        var vm = new Vue({
+            el:"#app",
+            //-------------------------------------
+            //-----------------model层-------------
+            //------------------------------------
+            data: {
+                 message:"hello vue",
+                types: ['a','b','c'],
+                check: false,
+                checkname: [],
+                radioValue: "",
+                selectVal: ""
+            },
+            methods: {
+                hello:function (event) {
+                    //this指的是当前vm对象
+                    //alert(this.message)
+                    if ("click" == event.type) {
+                        alert("点击了我");
+                    }
+                    if ("mouseover" == event.type){
+                        alert("鼠标滑过我")
+                    }
+
+                }
+            }
+        });
+    </script>
+
+
+
+
+
+
+</body>
+</html>

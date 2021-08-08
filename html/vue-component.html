@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue组件</title>
+</head>
+<body>
+    <div id="label">
+        <p>下面是我的组件：</p>
+<!--        v-for循环几次，就会创建多少个组件-->
+        <mycomponebt v-for="(index,item) in ['a','b', 'c']" v-bind:name="item" v-bind:index="index"></mycomponebt>
+
+    </div>
+
+<!--    <div>-->
+<!--            必须得是vue对象才能用组件-->
+<!--        <mycomponebt></mycomponebt>-->
+<!--    </div>-->
+
+    <script  type="text/javascript" src="vue/vue.js"></script>
+    <script type="text/javascript">
+        //声明一个组件
+        Vue.component("mycomponebt",{
+                props: ['index', 'name'],
+                template: '<h1>我的vue组件,传入参数：index: {{index}}, name: {{name}}</h1>'
+            }
+        );
+        //声明一个vue对象
+        var vm = new Vue({
+            el: "#label"
+        });
+    </script>
+</body>
+</html>
