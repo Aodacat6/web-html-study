@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue methods和computed区别</title>
+</head>
+<body>
+    <div id="app">
+        <p>methods: {{showdate()}}</p>
+        <!--showdate2是属性，不是方法，不加括号-->
+        <p>computed: {{showdate2}}</p>
+    </div>
+
+    <script type="text/javascript" src="html/vue/vue.js"></script>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                message: ""
+            },
+            methods: {
+                showdate:function(){
+                    return Date.now();
+                }
+            },
+            computed:{  //计算属性，注意是属性！！不是方法
+                showdate2:function () {
+                    //this.message;
+                    return Date.now();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
