@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            name:{{info.name}}
+        </div>
+        <div>
+            city:{{info.address.city}}
+        </div>
+        <mydiv v-for="item in info.links" v-bind:url="item.url"></mydiv>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+        Vue.component("mydiv", {
+            props: ['url'],
+            template: "<div><a v-bind:href=url>{{url}}</a></div>"
+        });
+        var vm = new Vue({
+            el: "#app",
+            data(){
+                return{
+                    info:{
+                        name: null,
+                        address:{
+                            city: null
+                        },
+                        links:[
+                            {
+                                url: null
+                            }
+                        ]
+                    }
+                }
+            },
+            //钩子函数
+            mounted(){
+                axios.get('data.json')
+                    .then(response => (this.info=response.data))
+            }
+        });
+    </script>
+
+
+</body>
+</html>

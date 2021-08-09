@@ -8,7 +8,7 @@
     <div id="label">
         <p>下面是我的组件：</p>
 <!--        v-for循环几次，就会创建多少个组件-->
-        <mycomponebt v-for="(index,item) in ['a','b', 'c']" v-bind:name="item" v-bind:index="index"></mycomponebt>
+        <mycomponebt v-for="(item,index) in ['a','b', 'c']" v-bind:name="item" v-bind:index="index"></mycomponebt>
 
     </div>
 
@@ -17,7 +17,7 @@
 <!--        <mycomponebt></mycomponebt>-->
 <!--    </div>-->
 
-    <script  type="text/javascript" src="vue/vue.js"></script>
+    <script  type="text/javascript" src="vue.js"></script>
     <script type="text/javascript">
         //声明一个组件
         Vue.component("mycomponebt",{
